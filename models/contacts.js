@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const ContactSchema = mongoose.Schema({
-    first_name:{
+   first_name:{
         type: String,
-        require : true
+        require: true
+        
     },
     last_name:{
         type: String,
@@ -13,6 +14,10 @@ const ContactSchema = mongoose.Schema({
         type: String,
         require : true
     }
+
+
 });
 
-const Contact = module.exports = mongoose.model('Contact', ContactSchema);
+
+ const Contact = module.exports = mongoose.model('Contact', ContactSchema);
+ 

@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const Contact = require('../models/contacts');
+ const Contact = require('../models/contacts');
 
 router.get('/contacts', function(req, res, next){
     Contact.find(function(err, contacts){
         res.json(contacts);
     });
 });
+
 
 // add contact
 router.post('/contact', function(req, res, next){
@@ -40,4 +41,8 @@ router.delete('/contact/:id', function(req, res, next){
     });
 });
 
+
+
+
 module.exports = router;
+
